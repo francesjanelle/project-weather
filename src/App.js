@@ -1,12 +1,7 @@
+import React from "react"
 
-import './App.css';
 import './index.css'
 
- export default function App() {
-  return 
-    <div className="App">
-      Weather App
-    </div>;
-  
-}
-
+export default function App() {
+  return <div className="App">Weather App </div>; 
+};
