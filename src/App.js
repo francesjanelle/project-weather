@@ -12,6 +12,7 @@ export default function App() {
     <body>
       <div className="MainCon">
         <Time />
+        <hr />
         <Weather />
       </div>
       </body>

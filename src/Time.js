@@ -2,9 +2,9 @@ import React from "react"
 
 export default function formatDate(timestamp) {
 
-            let nowDate = new Date(timestamp)
+            const nowDate = new Date()
 
-            let months = [
+            const months = [
                 "Jan",
                 "Feb",
                 "Mar",
@@ -18,6 +18,15 @@ export default function formatDate(timestamp) {
                 "Nov",
                 "Dec"
             ]
-            let month = months.[nowDate.getMonth()]
-      return (`${month}`) 
+            const month = months[nowDate.getMonth()]
+
+            const date = nowDate.getDate()
+
+            if (date < 10) {
+                date = `0${date}`
+            }
+
+            const year = nowDate.getFullYear()
+            
+      return (`${month} ${date}, ${year}`) 
         }
