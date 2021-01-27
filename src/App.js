@@ -17,7 +17,7 @@ export default function App() {
       <div className="myName">
        <small>
           <a href="https://github.com/francesjanelle/project-weather" target="_blank">{" "}GitHub Repsitory</a>
-        {" "}by:{" "}📧 <a href="mailto:frances.janelle.torres@gmail.com" target="_blank">   Frances-Janelle Torres</a>
+        {" "}by:{" "}📧 <a href="mailto:frances.janelle.torres@gmail.com" target="_blank"> Frances-Janelle Torres</a>
        </small>
       </div>
     </footer>
