@@ -1,5 +1,6 @@
 import React from "react"
 import Weather from "./Weather"
+import Time from "./Time"
 import './index.css'
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
     </header>
     <body>
       <div className="MainCon">
+        <Time />
         <Weather />
       </div>
       </body>
