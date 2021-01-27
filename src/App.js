@@ -1,11 +1,18 @@
 import React from "react"
-
+import Weather from "./Weather"
 import './index.css'
 
 export default function App() {
   return (
   <div className="App">
-    <h3> Weather App </h3>
+    <header>
+    <h1> Weather App </h1>
+    </header>
+    <body>
+      <div className="MainCon">
+        <Weather />
+      </div>
+      </body>
     <footer> 
       <p>
         <a href="https://github.com/francesjanelle/project-weather" target="_blank">{" "}GitHub Repsitory</a>
