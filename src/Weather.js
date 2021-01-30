@@ -1,12 +1,12 @@
 import React, { useState } from "react"
-// import axios from "react-axios"
+import axios from "react-axios"
 import "./index.css"
 
 export default function Weather(props) {
     const [setCity, city] = useState("")
 
     function WeatherShow(response) { 
-        console.log(response)
+        console.log(response.data)
     }
 
 
