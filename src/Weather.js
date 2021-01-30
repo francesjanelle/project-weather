@@ -17,8 +17,8 @@ export default function Weather(props) {
         axios.get(apiUrl).then(WeatherShow)
     }
 
-    function WeatherUpdate() { 
-
+    function WeatherUpdate(event) { 
+        setCity(event.target.value)
     }
 
     return ( <div className="weather-form">
