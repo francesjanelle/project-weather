@@ -1,33 +1,49 @@
+import React from "react"
+
 import "./index.css"
 
-export default function formatDate(timestamp) {
+export default function formatDate(props) {
 
-            const nowDate = new Date()
+    console.log(props.date)
 
-            const months = [
-                "Jan",
-                "Feb",
-                "Mar",
-                "Apr",
-                "May",
-                "June",
-                "July",
-                "Aug",
-                "Sep",
-                "Oct",
-                "Nov",
-                "Dec"
-            ]
-            let month = months[nowDate.getMonth()]
+    let days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+    ]
 
-            let date = nowDate.getDate()
+    let day = props.date.getDay();
 
-            if (date < 10) {
-                date = `0${date}`
-            }
+    let months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "June",
+        "July",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+    ]
+    
+    let month = months[props.date.getMonth()]
 
-            const year = nowDate.getFullYear()
+    let date = props.date.getDate()
+
+    if (date < 10) {
+        date = `0${date}`
+    }
+
+    let year = props.date.getFullYear()
             
     return (
-        <h3> {month} {date}, {year} </h3>) 
-        }
+        <h3> {month} {date}, {year} </h3>
+    )
+}

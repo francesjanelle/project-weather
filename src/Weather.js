@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-// import Time from "./Time";
+import Time from "./Time";
 import "./index.css";
 
 export default function Weather(props) {
@@ -14,7 +14,7 @@ export default function Weather(props) {
      const [weatherData, weatherDataSet] =useState({ })
 
     function WeatherShow(response) { 
-//       console.log(response.data);
+       console.log(response.data);
 
         weatherDataSet({
             ready: true,
@@ -22,7 +22,8 @@ export default function Weather(props) {
             Wind: Math.round(response.data.wind.speed),
             description: response.data.weather[0].description,
             humidity: response.data.main.humidity,
-            city: response.data.name
+            city: response.data.name,
+            date: new Date(response.data.dt * 1000)
         })        
     }
 
@@ -32,7 +33,7 @@ export default function Weather(props) {
             <div className="weather-form">
                 <div className="container">
                     <h1> { weatherData.city } </h1>
-                    <h2> Hello Time </h2>
+                    <Time date={ weatherData.date} />
                     <hr/> 
                     <Container>
                         <Row>
