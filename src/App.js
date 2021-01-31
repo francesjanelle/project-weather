@@ -2,10 +2,12 @@ import React from "react"
 import Weather from "./Weather"
 import Time from "./Time"
 import './index.css'
+import 'bootstrap/dist/css/bootstrap.css';
 
 export default function App() {
   return (
-  <div className="App">
+    <div className="App">
+      <div className="container">
     <header>
     <h1> Weather App </h1>
     </header>
@@ -23,6 +25,7 @@ export default function App() {
         {" "}by:{" "}📧 <a href="mailto:frances.janelle.torres@gmail.com" target="_blank"> Frances-Janelle Torres</a>
        </small>
       </div>
-    </footer>
+        </footer>
+        </div>
   </div> )
 };
