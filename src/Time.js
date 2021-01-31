@@ -1,4 +1,3 @@
-import React from "react"
 import "./index.css"
 
 export default function formatDate(timestamp) {
@@ -19,9 +18,9 @@ export default function formatDate(timestamp) {
                 "Nov",
                 "Dec"
             ]
-            const month = months[nowDate.getMonth()]
+            let month = months[nowDate.getMonth()]
 
-            const date = nowDate.getDate()
+            let date = nowDate.getDate()
 
             if (date < 10) {
                 date = `0${date}`
