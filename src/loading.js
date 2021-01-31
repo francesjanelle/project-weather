@@ -5,7 +5,7 @@ export default function Loading() {
     return (
         <Loader
             type="ThreeDots"
-            color="#00BFFF"
+            color="#007bff"
             height={80}
             width={80} />
         )

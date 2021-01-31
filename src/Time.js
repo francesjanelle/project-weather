@@ -16,7 +16,7 @@ export default function formatDate(props) {
         "Saturday"
     ]
 
-    let day = props.date.getDay();
+    let day = days[props.date.getDay()];
 
     let months = [
         "Jan",
@@ -44,6 +44,11 @@ export default function formatDate(props) {
     let year = props.date.getFullYear()
             
     return (
-        <h3> {month} {date}, {year} </h3>
+        <div className="Date">
+            <h3> {month} {date}, {year} </h3>
+        </div>,
+        <div className="Today">
+            <h4> {day} </h4> 
+            </div>
     )
 }
