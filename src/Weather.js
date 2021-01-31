@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import Time from "./Time";
+// import Time from "./Time";
 import "./index.css";
 
 export default function Weather(props) {
@@ -14,14 +14,15 @@ export default function Weather(props) {
      const [weatherData, weatherDataSet] =useState({ })
 
     function WeatherShow(response) { 
-        console.log(response.data);
+//       console.log(response.data);
 
         weatherDataSet({
             ready: true,
             temperature: Math.round(response.data.main.temp),
-            Wind: 5,
+            Wind: Math.round(response.data.wind.speed),
             description: response.data.weather[0].description,
             humidity: response.data.main.humidity,
+            city: response.data.name
         })        
     }
 
@@ -30,19 +31,20 @@ export default function Weather(props) {
         return (
             <div className="weather-form">
                 <div className="container">
-                <h1> Denver </h1>
-                    <Time />
+                    <h1> { weatherData.city } </h1>
+                    <h2> Hello Time </h2>
                     <hr/> 
                     <Container>
                         <Row>
                             <Col>
+                                
                                 <h2> {weatherData.temperature}°C </h2>
                                 <h4 className="text-capitalize"> {weatherData.description}  </h4>
                             </Col>
                             <Col>
                                 <ul>
-                                    <li> 💧  Humidity: { weatherData.humidity }  </li>
-                                    <li> 🎐  Wind: { weatherData.Wind } </li>
+                                    <li> 💧  Humidity: { weatherData.humidity } %  </li>
+                                    <li> 🎐  Wind: { weatherData.Wind } km/h </li>
                                 </ul>
                             </Col>
                             <Col>
