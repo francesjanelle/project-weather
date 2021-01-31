@@ -8,14 +8,24 @@ import Time from "./Time";
 import "./index.css";
 
 export default function Weather(props) {
-    const [setWeatherData, weatherData] = useState({ ready: false });
+    // const [setWeatherData, weatherData] = useState({ ready: false });
+    // const [ready, setReady] = useState(false);
+    // const [weather, setWeather] = useState(null);
+     const [weatherData, weatherDataSet] =useState({ })
 
     function WeatherShow(response) { 
-        console.log(response.data)
+        console.log(response.data);
 
+        weatherDataSet({
+            ready: true,
+            temperature: Math.round(response.data.main.temp),
+            Wind: 5,
+            description: response.data.weather[0].description,
+            humidity: response.data.main.humidity,
+        })        
     }
 
-    if (ready) {
+    if (weatherData.ready) {
 
         return (
             <div className="weather-form">
@@ -26,13 +36,13 @@ export default function Weather(props) {
                     <Container>
                         <Row>
                             <Col>
-                                <h2> 20° </h2>
-                                <h3> Clear Skies </h3>
+                                <h2> {weatherData.temperature}°C </h2>
+                                <h4 className="text-capitalize"> {weatherData.description}  </h4>
                             </Col>
                             <Col>
                                 <ul>
-                                    <li> 💧  Precipitation:  </li>
-                                    <li> 🎐  Humidity</li>
+                                    <li> 💧  Humidity: { weatherData.humidity }  </li>
+                                    <li> 🎐  Wind: { weatherData.Wind } </li>
                                 </ul>
                             </Col>
                             <Col>
