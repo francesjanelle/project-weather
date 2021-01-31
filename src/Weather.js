@@ -54,11 +54,5 @@ export default function Weather(props) {
         axios.get(apiUrl).then(WeatherShow)
 
         return "Hold on.."
-    }
-
-  /*  function WeatherUpdate(event) { 
-        setCity(event.target.value)
-    } */
-
-    
+    }    
 }
