@@ -14,7 +14,7 @@ export default function Weather(props) {
      const [weatherData, weatherDataSet] =useState({ })
 
     function WeatherShow(response) { 
-       console.log(response.data);
+    //   console.log(response.data);
 
         weatherDataSet({
             ready: true,
