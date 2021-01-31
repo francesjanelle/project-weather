@@ -1,5 +1,10 @@
 import React, { useState } from "react"
 import axios from "react-axios"
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
+import Time from "./Time"
 import "./index.css"
 
 export default function Weather(props) {
@@ -21,10 +26,31 @@ export default function Weather(props) {
         setCity(event.target.value)
     }
 
-    return ( <div className="weather-form">
-        <form onSubmit={WeatherSearch}>
-            <input type="search" placeholder="Location" onChange={WeatherUpdate} /> {" "}
-            <input type="submit" value="Search"/>
-        </form>
+    return (
+        <div className="weather-form">
+            <div className="container">
+            <h1> Denver </h1>
+                <Time />
+                <hr/>
+                <Container>
+                    <Row>
+                        <Col>
+                            <h2> Hello World! </h2>
+                        </Col>
+                        <Col>
+                            <ul>
+                                <li> 💧  Precipitation:  </li>
+                                <li> 🎐  Humidity</li>
+                            </ul>
+                        </Col>
+                        <Col>
+            <form onSubmit={WeatherSearch}>
+                <input type="search" placeholder="Location" onChange={WeatherUpdate} /> {" "}
+                <Button variant="primary" type="submit">Search</Button>
+                            </form>
+                            </Col>
+                        </Row>
+                </Container>
+            </div>
     </div>)
 }

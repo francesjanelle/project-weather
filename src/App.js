@@ -1,6 +1,6 @@
 import React from "react"
 import Weather from "./Weather"
-import Time from "./Time"
+// import Time from "./Time"
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -13,8 +13,6 @@ export default function App() {
     </header>
     <body>
       <div className="MainCon">
-        <Time />
-        <hr />
         <Weather />
       </div>
       </body>

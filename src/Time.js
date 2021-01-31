@@ -28,5 +28,6 @@ export default function formatDate(timestamp) {
 
             const year = nowDate.getFullYear()
             
-      return (`${month} ${date}, ${year}`) 
+    return (
+        <h3> {month} {date}, {year} </h3>) 
         }
