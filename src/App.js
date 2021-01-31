@@ -13,7 +13,7 @@ export default function App() {
     </header>
     <body>
       <div className="MainCon">
-        <Weather />
+        <Weather defaultCity="Denver" />
       </div>
       </body>
     <footer> 
