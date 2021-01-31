@@ -4,9 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import Time from "./Time";
-import Today from "./Today"
 import Loading from "./loading"
+import WeatherInfo from "./WeatherInfo"
 import "./index.css";
 
 export default function Weather(props) {
@@ -32,36 +31,21 @@ export default function Weather(props) {
     if (weatherData.ready) {
 
         return (
-            <div className="weather-form">
-                <div className="container">
-                    <h1> { weatherData.city } </h1>
-                    <Time date={weatherData.date} />
-                    <Today date={weatherData.date} />
-                    <hr/> 
-                    <Container>
-                        <Row>
-                            <Col>
-                        
-                                <h2> {weatherData.temperature}°C </h2>
-                                <h4 className="text-capitalize"> {weatherData.description}  </h4>
-                            </Col>
-                            <Col>
-                                <ul>
-                                    <li> 💧  Humidity: { weatherData.humidity } %  </li>
-                                    <li> 🎐  Wind: { weatherData.Wind } km/h </li>
-                                </ul>
-                            </Col>
-                            <Col>
-                                <form>
-                                    <input type="search" placeholder="Location" /* onChange={WeatherUpdate} */ /> {" "}
-                                    <Button variant="primary" type="submit">Search</Button>
-                                </form>
-                            </Col>
-                        </Row>
-                    </Container>
-                    <hr />
-                </div>
-        </div>)
+            <div className="Search">
+                <Container>
+                    <Row>
+                        <WeatherInfo info={weatherData} />
+                        <Col>
+                            <form>
+                                <input type="search" placeholder="Location" /* onChange={WeatherUpdate} */ /> {" "}
+                                <Button variant="primary" type="submit">Search</Button>
+                            </form>
+                        </Col>
+                    </Row>
+                </Container>
+                <hr />
+            </div>
+        )
     } else {
         
       //  const apiKey = "deb4d0036edfa966c7a36750fd024ceb"
