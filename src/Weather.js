@@ -23,7 +23,7 @@ export default function Weather(props) {
             Wind: Math.round(response.data.wind.speed),
             description: response.data.weather[0].description,
             humidity: response.data.main.humidity,
-            ity: response.data.name,
+            city: response.data.name,
             date: new Date(response.data.dt * 1000)
         })        
     }
