@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Time from "./Time";
+import Loading from "./loading"
 import "./index.css";
 
 export default function Weather(props) {
@@ -66,6 +67,6 @@ export default function Weather(props) {
         let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
         axios.get(apiUrl).then(WeatherShow)
 
-        return "Hold on.."
+        return <Loading />
     }    
 }
