@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Time from "./Time";
+import Today from "./Today"
 import Loading from "./loading"
 import "./index.css";
 
@@ -34,12 +35,13 @@ export default function Weather(props) {
             <div className="weather-form">
                 <div className="container">
                     <h1> { weatherData.city } </h1>
-                    <Time date={ weatherData.date} />
+                    <Time date={weatherData.date} />
+                    <Today date={weatherData.date} />
                     <hr/> 
                     <Container>
                         <Row>
                             <Col>
-                                
+                        
                                 <h2> {weatherData.temperature}°C </h2>
                                 <h4 className="text-capitalize"> {weatherData.description}  </h4>
                             </Col>

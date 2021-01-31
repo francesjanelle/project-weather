@@ -46,9 +46,9 @@ export default function formatDate(props) {
     return (
         <div className="Date">
             <h3> {month} {date}, {year} </h3>
-        </div>,
-        <div className="Today">
+        </div>
+   /*     <div className="Today">
             <h4> {day} </h4> 
-            </div>
+            </div>  */
     )
 }
