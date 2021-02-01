@@ -29,3 +29,7 @@
 .weather-form ul {
   list-style-type: none;
 }
+
+.searchBox {
+  padding: 10px;
+}

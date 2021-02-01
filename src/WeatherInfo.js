@@ -9,28 +9,28 @@ import "./index.css"
 export default function WeatherInfo(props) { 
 
     return (
-
     <div className="weather-form">
         <div className="container">
-            <h1> {props.data.city} </h1>
-                <Time date={props.data.date} />
-                <Today date={props.data.date} />
-                <hr/> 
-                <Container>
-                    <Row>
-                        <Col>
+            <h1> {props.info.city} </h1>
+            <Time date={props.info.date} />
+            <Today date={props.info.date} />
+            <hr/> 
+            <Container>
+                <Row>
+                    <Col>
                         
-                            <h2> {props.data.temperature}°C </h2>
-                            <h4 className="text-capitalize"> {props.data.description}  </h4>
-                        </Col>
-                        <Col>
-                            <ul>
-                                <li> 💧  Humidity: {props.data.humidity} %  </li>
-                                <li> 🎐  Wind: {props.data.Wind} km/h </li>
-                            </ul>
-                        </Col>
-                     </Row>
-                </Container>
+                        <h2> {props.info.temperature}°C </h2>
+                        <h4 className="text-capitalize"> {props.info.description}  </h4>
+                    </Col>
+                        
+                    <Col>
+                        <ul>
+                            <li> 💧  Humidity: {props.info.humidity} %  </li>
+                            <li> 🎐  Wind: {props.info.Wind} km/h </li>
+                        </ul>
+                    </Col>
+                 </Row>
+            </Container>
         </div>
     </div>        
     )

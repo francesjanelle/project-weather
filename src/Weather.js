@@ -34,12 +34,13 @@ export default function Weather(props) {
             <div className="Search">
                 <Container>
                     <Row>
-                        <WeatherInfo info={weatherData} />
                         <Col>
-                            <form>
+                            <form className="searchBox">
                                 <input type="search" placeholder="Location" /* onChange={WeatherUpdate} */ /> {" "}
                                 <Button variant="primary" type="submit">Search</Button>
                             </form>
+                            <hr />
+                        <WeatherInfo info={weatherData} />
                         </Col>
                     </Row>
                 </Container>
