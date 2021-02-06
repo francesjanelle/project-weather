@@ -38,6 +38,8 @@
   text-align: center;
 }
 
-.weather-icon {
-  margin-top: 5px;
+.weather-icon canvas {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }

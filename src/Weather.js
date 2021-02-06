@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Loading from "./loading"
 import WeatherInfo from "./WeatherInfo"
+import WeatherValue from ".WWeatherValue"
 import "./index.css";
 
 export default function Weather(props) {
