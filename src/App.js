@@ -14,7 +14,8 @@ export default function App() {
     <body>
       <div className="MainCon">
         <Weather defaultCity="Denver" />
-      </div>
+          </div>
+          
       </body>
     <footer> 
       <div className="myName">

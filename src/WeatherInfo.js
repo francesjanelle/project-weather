@@ -15,7 +15,7 @@ export default function WeatherInfo(props) {
             <h1> {props.info.city} </h1>
             <Time date={props.info.date} />
             <Today date={props.info.date} />
-            <hr/> 
+             
             <Container>
                 <Row>
                     <WeatherIcon code={props.info.icon} />
