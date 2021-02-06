@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Loading from "./loading"
 import WeatherInfo from "./WeatherInfo"
-import WeatherValue from ".WWeatherValue"
+import WeatherValue from ".WeatherValue"
 import "./index.css";
 
 export default function Weather(props) {
@@ -56,6 +56,7 @@ export default function Weather(props) {
                     <Row>
                         <Col>
                             <form className="searchBox" onSubmit={weatherSubmit}>
+                                <WeatherValue />
                                 <input type="search" placeholder="Location" onChange={weatherUpdate} /> {" "}
                                 <Button variant="primary" type="submit">Search</Button>
                             </form>
