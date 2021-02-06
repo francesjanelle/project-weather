@@ -20,7 +20,6 @@ export default function WeatherInfo(props) {
             <Container>
                 <Row>
                     <WeatherIcon />
-                
                     <Col>
                     <h2> {props.info.temperature}°C </h2>
                         <h4 className="text-capitalize"> {props.info.description}  </h4>
