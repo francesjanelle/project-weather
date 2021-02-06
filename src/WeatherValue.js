@@ -24,7 +24,7 @@ export default function WeatherValue(props) {
             <div className="weather-value">
                 <h2> {props.celsius} {" "}
                     °C | {" "}
-                    <a href="/" onChange={showFahr}>°F </a>
+                    <a href="/" onClick={showFahr}>°F </a>
                 </h2>
             </div>
         ) 
@@ -32,7 +32,7 @@ export default function WeatherValue(props) {
         return (
             <div className="weather-value">
                 <h2> {fahrenheit()} {" "}
-                    <a href="/" onChange={showCels}>°C </a> |{" "}°F
+                    <a href="/" onClick={showCels}>°C </a> |{" "}°F
                 </h2>
             </div>
         )
