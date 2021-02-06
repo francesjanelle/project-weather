@@ -7,11 +7,13 @@ export default function WeatherIcon(props) {
     } */
 
     return (
-        <div className="weathericon">
-            <img
-                src={props.info.icon}
-                alt={props.info.description} 
-                /> 
+        <div className="weather-icon">
+           <ReactAnimatedWeather
+                icon = "CLEAR_DAY"
+                color = "blue"
+                size = {60}
+                animate = {true}
+            />
         </div>
     )
 }

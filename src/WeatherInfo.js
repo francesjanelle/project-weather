@@ -16,10 +16,11 @@ export default function WeatherInfo(props) {
             <Time date={props.info.date} />
             <Today date={props.info.date} />
             <hr/> 
-
             <Container>
                 <Row>
-                    <WeatherIcon />
+                    <WeatherIcon
+                        code={props.info.icon}
+                        />
                     <Col>
                     <h2> {props.info.temperature}°C </h2>
                         <h4 className="text-capitalize"> {props.info.description}  </h4>

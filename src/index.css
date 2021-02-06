@@ -37,3 +37,7 @@
 .Loading {
   text-align: center;
 }
+
+.weather-icon {
+  margin-top: 5px;
+}
