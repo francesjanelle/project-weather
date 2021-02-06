@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Time from "./Time";
 import Today from "./Today";
+import WeatherIcon from "./WeatherIcon"
 import "./index.css"
 
 export default function WeatherInfo(props) { 
@@ -18,8 +19,10 @@ export default function WeatherInfo(props) {
 
             <Container>
                 <Row>
-                        {props.info.icon} <h2> {props.info.temperature}°C </h2>
+                    <WeatherIcon />
+                
                     <Col>
+                    <h2> {props.info.temperature}°C </h2>
                         <h4 className="text-capitalize"> {props.info.description}  </h4>
                     </Col>
                         
