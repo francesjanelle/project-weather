@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Time from "./Time";
 import Today from "./Today";
-import axios from "axios";
 import "./index.css"
 
 export default function WeatherInfo(props) { 

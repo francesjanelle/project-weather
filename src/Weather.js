@@ -28,10 +28,18 @@ export default function Weather(props) {
             date: new Date(response.data.dt * 1000)
         })        
     }
+    
+    function search() {
+        //  const apiKey = "deb4d0036edfa966c7a36750fd024ceb"
+        //   let city = "Denver"
+          let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
+          axios.get(apiUrl).then(WeatherShow)
+    }
 
     function weatherSubmit(event) {
         event.preventDefault();
         console.log(city)
+        search();
     }
 
     function weatherUpdate(event) {
@@ -58,12 +66,11 @@ export default function Weather(props) {
             </div>
         )
     } else {
-        
-      //  const apiKey = "deb4d0036edfa966c7a36750fd024ceb"
-      //   let city = "Denver"
-        let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
-        axios.get(apiUrl).then(WeatherShow)
-
-        return <Loading />
+        search()
+            return (
+                <div className = "Loading"> 
+                    <Loading />
+                </div>
+                )
     }    
 }
