@@ -30,6 +30,11 @@
   list-style-type: none;
 }
 
+.SearchForm canvas {
+  margin: 10px;
+  padding: 10px;
+}
+
 .searchBox {
   padding: 10px;
 }
