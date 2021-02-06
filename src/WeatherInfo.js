@@ -18,9 +18,7 @@ export default function WeatherInfo(props) {
             <hr/> 
             <Container>
                 <Row>
-                    <WeatherIcon
-                        code={props.info.icon}
-                        />
+                    <WeatherIcon code={props.info.icon} />
                     <Col>
                     <h2> {props.info.temperature}°C </h2>
                         <h4 className="text-capitalize"> {props.info.description}  </h4>
