@@ -13,6 +13,7 @@ export default function Weather(props) {
     // const [ready, setReady] = useState(false);
     // const [weather, setWeather] = useState(null);
      const [weatherData, weatherDataSet] =useState({ })
+     const [city, setCity] = useState(props.defaultCity)
 
     function WeatherShow(response) { 
     //   console.log(response.data);
@@ -28,6 +29,15 @@ export default function Weather(props) {
         })        
     }
 
+    function weatherSubmit(event) {
+        event.preventDefault();
+        console.log(city)
+    }
+
+    function weatherUpdate(event) {
+        setCity(event.target.value)
+    }
+
     if (weatherData.ready) {
 
         return (
@@ -35,8 +45,8 @@ export default function Weather(props) {
                 <Container>
                     <Row>
                         <Col>
-                            <form className="searchBox">
-                                <input type="search" placeholder="Location" /* onChange={WeatherUpdate} */ /> {" "}
+                            <form className="searchBox" onSubmit={weatherSubmit}>
+                                <input type="search" placeholder="Location" onChange={weatherUpdate} /> {" "}
                                 <Button variant="primary" type="submit">Search</Button>
                             </form>
                             <hr />
@@ -51,7 +61,7 @@ export default function Weather(props) {
         
       //  const apiKey = "deb4d0036edfa966c7a36750fd024ceb"
       //   let city = "Denver"
-        let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
+        let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
         axios.get(apiUrl).then(WeatherShow)
 
         return <Loading />

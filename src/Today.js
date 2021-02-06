@@ -4,7 +4,7 @@ import "./index.css"
 
 export default function Today(props) {
 
-    console.log(props.date)
+ //   console.log(props.date)
 
     let days = [
         "Sunday",
@@ -20,9 +20,9 @@ export default function Today(props) {
 
     return (
         <div className="Current">
-            <h4>
+            <h5>
                 {day}
-            </h4>
+            </h5>
         </div>
     )
 };

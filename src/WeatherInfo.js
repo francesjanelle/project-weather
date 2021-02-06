@@ -16,6 +16,7 @@ export default function WeatherInfo(props) {
             <Time date={props.info.date} />
             <Today date={props.info.date} />
             <hr/> 
+
             <Container>
                 <Row>
                     <Col>

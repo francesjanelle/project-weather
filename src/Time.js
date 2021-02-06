@@ -4,7 +4,7 @@ import "./index.css"
 
 export default function formatDate(props) {
 
-    console.log(props.date)
+   // console.log(props.date)
 
     let months = [
         "Jan",
@@ -33,7 +33,7 @@ export default function formatDate(props) {
             
     return (
         <div className="Date">
-            <h3> {month} {date}, {year} </h3>
+            <h4> {month} {date}, {year} </h4>
         </div>
    /*     <div className="Today">
             <h4> {day} </h4> 
