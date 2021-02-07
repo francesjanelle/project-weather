@@ -23,12 +23,16 @@ export default function WeatherIcon(props) {
         "11n" : "RAIN",
         "13n" : "SNOW",
         "50n" : "FOG"
-    } 
+    };
 
     return (
         <div className="weather-icon">
            <ReactAnimatedWeather
+<<<<<<< Updated upstream
                 icon= {weatherCode[props.code]}
+=======
+                icon = {weatherCode[props.code]}
+>>>>>>> Stashed changes
                 color = "black"
                 size = {70}
                 animate = {true}

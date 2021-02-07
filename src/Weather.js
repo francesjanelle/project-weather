@@ -17,7 +17,7 @@ export default function Weather(props) {
      const [city, setCity] = useState(props.defaultCity)
 
     function WeatherShow(response) { 
-       console.log(response.data);
+//      console.log(response.data);
 
         weatherDataSet({
             ready: true,
@@ -40,7 +40,7 @@ export default function Weather(props) {
 
     function weatherSubmit(event) {
         event.preventDefault();
-        console.log(city)
+//      console.log(city)
         search();
     }
 
