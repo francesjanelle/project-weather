@@ -67,25 +67,7 @@ export default function Weather(props) {
                     </Row>
                 </Container>
                 <hr />
-                <Container> 
-                    <Row>
-                        <Col>
-                            <WeatherForecast />
-                        </Col>
-                        <Col>
-                            <WeatherForecast />
-                        </Col>
-                        <Col>
-                            <WeatherForecast />
-                        </Col>
-                        <Col>
-                            <WeatherForecast />
-                        </Col>
-                        <Col>
-                            <WeatherForecast />
-                        </Col>
-                    </Row>
-                </Container>
+                <WeatherForecast city={ weatherData.city}/>
             </div>
         )
     } else {
