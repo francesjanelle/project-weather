@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Loading from "./loading"
 import WeatherInfo from "./WeatherInfo"
+import WeatherForecast from "./WeatherForecast"
 
 import "./index.css";
 
@@ -66,6 +67,25 @@ export default function Weather(props) {
                     </Row>
                 </Container>
                 <hr />
+                <Container> 
+                    <Row>
+                        <Col>
+                            <WeatherForecast />
+                        </Col>
+                        <Col>
+                            <WeatherForecast />
+                        </Col>
+                        <Col>
+                            <WeatherForecast />
+                        </Col>
+                        <Col>
+                            <WeatherForecast />
+                        </Col>
+                        <Col>
+                            <WeatherForecast />
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         )
     } else {
