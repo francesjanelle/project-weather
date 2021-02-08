@@ -67,7 +67,7 @@ export default function Weather(props) {
                     </Row>
                 </Container>
                 <hr />
-                <WeatherForecast city={ weatherData.city}/>
+                <WeatherForecast city={weatherData.city}/>
             </div>
         )
     } else {
