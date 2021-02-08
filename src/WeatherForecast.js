@@ -6,7 +6,7 @@ export default function WeatherForecast(props) {
     const [forecast, setForecast] = useState(null)
 
     function ForecastHandle(response) {
-        setForecast(response.data.list)
+        setForecast(response.data.list[0])
         setLoaded(true)
     }
     
