@@ -6,12 +6,12 @@ export default function WeatherForecast(props) {
     const [forecast, setForecast] = useState(null)
 
     function ForecastHandle(response) {
-        setForecast(response.data.list[0])
+        setForecast(response.data)
         setLoaded(true)
     }
     
     if (loaded) { 
-        console.log(forecast)
+ //       console.log(forecast.list)
     }
 
    //  const key = deb4d0036edfa966c7a36750fd024ceb

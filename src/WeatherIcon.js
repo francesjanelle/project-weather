@@ -2,7 +2,7 @@ import React from "react"
 import ReactAnimatedWeather from 'react-animated-weather';
 
 export default function WeatherIcon(props) {
-    console.log(props.code)
+ //   console.log(props.code)
 
     const weatherCode = {
         "01d" : "CLEAR_DAY",
