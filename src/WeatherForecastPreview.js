@@ -11,7 +11,7 @@ export default function ForecastPreview(props) {
     }
 
     function forecastTemp() {
-       let temp = Math.round(props.list[0].main.temp)
+       let temp = Math.round(props.data.main.temp)
        
        return `${temp}°C`
     }
@@ -19,7 +19,7 @@ export default function ForecastPreview(props) {
     return  (
         <div className="forecast">
             {forecastHours()}
-            <WeatherIcon code={props.list[0].weather[0].icon} />
+            <WeatherIcon code={props.data.weather[0].icon} />
             {forecastTemp()}
         </div>
     )

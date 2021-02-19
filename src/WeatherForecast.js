@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-// import WeatherIcon from "./WeatherIcon"
 import ForecastPreview from "./WeatherForecastPreview"
 import axios from "axios"
 
@@ -8,6 +7,7 @@ export default function WeatherForecast(props) {
     const [forecast, setForecast] = useState(null)
 
     function ForecastHandle(response) {
+        console.log(response.data)
         setForecast(response.data)
         setLoaded(true)
     }
