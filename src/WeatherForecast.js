@@ -15,7 +15,7 @@ export default function WeatherForecast(props) {
     if (loaded) { 
   //      console.log(forecast.list[0])
         return (
-            <ForecastPreview props={forecast.list[0]}/>
+            <ForecastPreview data={forecast.list[0]}/>
             )
     } else {
 
