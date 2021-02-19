@@ -20,7 +20,7 @@ export default function App() {
     <footer> 
       <div className="myName">
        <small>
-          <a href="https://github.com/francesjanelle/project-weather" target="_blank">{" "}GitHub Repsitory</a>
+          <a href="https://github.com/francesjanelle/project-weather" target="_blank" rel="noreferrer">{" "}GitHub Repsitory</a>
         {" "}by:{" "}📧 <a href="mailto:frances.janelle.torres@gmail.com"> Frances-Janelle Torres</a>
        </small>
       </div>
