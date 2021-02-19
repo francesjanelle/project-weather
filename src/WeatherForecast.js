@@ -14,10 +14,15 @@ export default function WeatherForecast(props) {
     
     if (loaded) { 
   //      console.log(forecast.list[0])
-        return (
+ 
+        return ( 
+        <div className="forecastPreview">
             <ForecastPreview data={forecast.list[0]} />
             <ForecastPreview data={forecast.list[1]} />
-        )
+            <ForecastPreview data={forecast.list[2]} />
+            <ForecastPreview data={forecast.list[3]} />
+            <ForecastPreview data={forecast.list[4]} />
+       </div> )
     } else {
 
    //  const key = deb4d0036edfa966c7a36750fd024ceb
