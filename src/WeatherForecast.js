@@ -8,15 +8,16 @@ export default function WeatherForecast(props) {
     const [forecast, setForecast] = useState(null)
 
     function ForecastHandle(response) {
-        setForecast(response.info)
+        setForecast(response.data)
         setLoaded(true)
     }
     
     if (loaded) { 
   //      console.log(forecast.list[0])
         return (
-            <ForecastPreview data={forecast.list[0]}/>
-            )
+            <ForecastPreview data={forecast.list[0]} />
+            <ForecastPreview data={forecast.list[1]} />
+        )
     } else {
 
    //  const key = deb4d0036edfa966c7a36750fd024ceb

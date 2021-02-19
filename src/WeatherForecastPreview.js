@@ -1,11 +1,25 @@
 import React, { useState } from "react"
 import WeatherIcon from "./WeatherIcon"
 
-export default function ForecastPreview(props) { 
+export default function ForecastPreview(props) {
+    
+    function forecastHours() {
+        let date = new Date(props.data.dt * 1000);
+        let hours = date.getHours()
+
+        return `${hours}:00`
+    }
+
+    function forecastTemp() {
+       let temp = Math.round(props.list[0].main.temp)
+       
+       return `${temp}°C`
+    }
+    
     return ( <div className="forecast">
-                {new Date(props.data.dt * 1000).getHours()}:00
+                {forecastHours()}
                 <WeatherIcon code={props.list[0].weather[0].icon} />
-                {Math.round(props.list[0].main.temp)} 
+                {forecastTemp()}
             </div>)
 }
 
