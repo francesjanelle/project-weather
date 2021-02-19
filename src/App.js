@@ -9,7 +9,7 @@ export default function App() {
     <div className="App">
       <div className="container">
     <header>
-    <h1> Weather App </h1>
+    <h1> Weather App React</h1>
     </header>
     <body>
       <div className="MainCon">
