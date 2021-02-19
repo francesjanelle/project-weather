@@ -18,9 +18,9 @@ export default function ForecastPreview(props) {
     
     return  (
         <div className="forecast">
-            {forecastHours()}
+           <h4> {forecastHours()} </h4>
             <WeatherIcon code={props.data.weather[0].icon} />
-            {forecastTemp()}
+           <h4> {forecastTemp()} </h4>
         </div>
     )
 }

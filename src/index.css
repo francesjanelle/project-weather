@@ -46,3 +46,7 @@
 .weather-icon canvas {
   margin-top: 5px;
 }
+
+.forecast {
+  text-align: center;
+}

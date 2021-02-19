@@ -1,13 +1,17 @@
 import React, { useState } from "react"
 import ForecastPreview from "./WeatherForecastPreview"
 import axios from "axios"
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import "./index.css"
 
 export default function WeatherForecast(props) {
     const [loaded, setLoaded] = useState(false)
     const [forecast, setForecast] = useState(null)
 
     function ForecastHandle(response) {
-        console.log(response.data)
+   //     console.log(response.data)
         setForecast(response.data)
         setLoaded(true)
     }
@@ -17,11 +21,25 @@ export default function WeatherForecast(props) {
  
         return ( 
         <div className="forecastPreview">
-            <ForecastPreview data={forecast.list[0]} />
-            <ForecastPreview data={forecast.list[1]} />
-            <ForecastPreview data={forecast.list[2]} />
-            <ForecastPreview data={forecast.list[3]} />
-            <ForecastPreview data={forecast.list[4]} />
+            <Container>
+                <Row>
+                    <Col>
+                        <ForecastPreview data={forecast.list[0]} />
+                    </Col>
+                    <Col>  
+                        <ForecastPreview data={forecast.list[1]} />
+                    </Col>
+                    <Col>    
+                        <ForecastPreview data={forecast.list[2]} />
+                    </Col>
+                    <Col>    
+                        <ForecastPreview data={forecast.list[3]} />
+                    </Col>
+                    <Col>    
+                        <ForecastPreview data={forecast.list[4]} />
+                    </Col>
+                </Row>
+            </Container>
        </div> )
     } else {
 
